@@ -12,7 +12,7 @@ server = HTTPServer.new(config)
 }
 
 server.mount_proc '/' do |req, res|
-  res.body = "#{ENV['127.8.200.129']}"#File.read 'index1.html'
+  res.body = "#{ENV['OPENSHIFT_DIY_IP']}"#File.read 'index1.html'
 end
 
 server.start
